@@ -1,0 +1,15 @@
+.btn{
+    justify-content: center;
+     display: flex;
+     padding: 10px 0 20px 0;
+  }
+.row{
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.va-table{
+    background-color: white;
+}
+.va-table-responsive{
+    padding-top: 50px;
+}

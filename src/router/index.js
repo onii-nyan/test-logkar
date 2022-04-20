@@ -1,19 +1,44 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import planetView from '../views/PlanetsView.vue'
+import speciesView from '../views/SpeciesView.vue'
+import starshipsView from '../views/StarshipsView.vue'
+import planetDetail from '../views/PlanetDetail.vue'
+import speciesDetail from '../views/SpeciesDetail.vue'
+import starshipsDetail from '../views/StarshipsDetail.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'planet',
+    component: planetView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/planet/:id',
+    name: 'planet-detail',
+    component: planetDetail,
+    props:true
+  },
+  {
+    path: '/species',
+    name: 'species',
+    component: speciesView
+  },
+  {
+    path: '/species/:id',
+    name: 'species-detail',
+    component: speciesDetail,
+    props:true
+  },
+  {
+    path: '/starships',
+    name: 'starships',
+    component: starshipsView
+  },
+  {
+    path: '/starships/:id',
+    name: 'starships-detail',
+    component: starshipsDetail,
+    props:true
   }
 ]
 
